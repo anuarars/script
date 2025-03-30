@@ -3,9 +3,18 @@
     <title>Test Page</title>
 </head>
 <body>
-    <h2>Hello from External Page 3</h2>
+    <h2>Test Page</h2>
+    <p>Link: <span id="queryParams"></span></p>
+
     <script>
-        console.log("Current URL:", window.location);
+        // Get the URL parameters
+        const params = window.location.search;
+
+        // Display the parameters on the page
+        document.getElementById("queryParams").textContent = params;
+
+        // Also log it to the console
+        console.log("Current URL:", params);
     </script>
 </body>
 </html>
